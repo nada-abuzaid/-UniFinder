@@ -1,0 +1,191 @@
+/* ------------------------------------------------------------------
+                    ***     Mobile Size Style        ***
+--------------------------------------------------------------------- */
+
+
+/* 1-1 Genral Info Section */
+
+.container-sections {
+    width: 90%;
+    margin: 0 auto;
+}
+
+.section-header {
+    padding: 0 2rem;
+    font-size: 1.4rem;
+    color: var(--font-color);
+}
+
+.all-info {
+    background-color: var(--light-gray-2);
+    height: 12rem;
+    width: 88%;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 2rem auto;
+}
+
+.info-head {
+    display: flex;
+    margin-left: 2.3rem;
+}
+
+.country-img {
+    width: 2rem;
+    height: 1.5rem;
+    margin-right: 1rem;
+    border-radius: 5px;
+}
+
+.coun-name {
+    font-size: 1.4rem;
+}
+
+.info-div {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    gap: 1rem;
+    font-size: 1.3rem;
+}
+
+.row-info {
+    display: flex;
+    margin-top: 4vh;
+}
+
+.icons {
+    color: #0d161d;
+    opacity: 30%;
+    font-size: 1.3rem;
+    padding-right: 3vw;
+}
+
+
+/* 1-2 Universities Cards Section Style */
+
+.uni-container {
+    display: grid;
+    grid-template-columns: 100%;
+    width: 90%;
+    margin: 2rem auto;
+}
+
+.card-btn {
+    border-radius: 16px;
+    padding: 30px 10px;
+    margin: 0 10px 15px 15px;
+    height: 150px;
+    border: none;
+}
+
+.card-btn:nth-child(odd) {
+    background-color: var(--odd-cards);
+}
+
+.card-btn:nth-child(even) {
+    background-color: var(--even-cards);
+}
+
+.card p {
+    position: relative;
+    top: 8px;
+    color: var(--font-color);
+}
+
+.card-btn:nth-child(even) .far {
+    color: var(--even-icon-color);
+}
+
+.card-btn:nth-child(odd) .far {
+    color: var(--odd-icon-color);
+}
+
+i.far.fa-school {
+    position: relative;
+    bottom: 20px;
+    font-size: 1.5rem;
+    left: 40%;
+}
+
+.uni-name {
+    font-size: 1.2rem;
+}
+
+
+/* ------------------ 2. Tablet Size ------------------ */
+
+@media (min-width: 420px) {
+    .uni-container {
+        grid-template-columns: 50% 50%;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+    .uni-container {
+        grid-template-columns: 33% 33% 33%;
+    }
+    .first-row,
+    .second-row {
+        display: flex;
+        flex-direction: row;
+        gap: 2rem;
+    }
+    .info-div {
+        display: flex;
+        justify-content: space-evenly;
+    }
+}
+
+
+/* ------------------ 3. Desktop Size ------------------ */
+
+@media (min-width: 1024px) {
+    .uni-container {
+        grid-template-columns: 25% 25% 25% 25%;
+    }
+    .icons {
+        padding-right: 1vw;
+    }
+    .first-row,
+    .second-row {
+        display: flex;
+        flex-direction: row;
+        gap: 2rem;
+    }
+    .info-div {
+        display: flex;
+        justify-content: flex-start;
+        gap: 1.5rem;
+        margin-left: 2.3rem;
+    }
+}
+
+
+/* ------------------ 4. Animation  ------------------ */
+
+.appear_card {
+    animation: appear_card 2s ease-in-out calc(0.2s * var(--i)), AnimationAppear_card calc(0.6s * var(--i)) ease-in-out;
+}
+
+.appear_container {
+    animation: appear_card calc(0.6s * var(--i)) ease-in-out;
+}
+
+@keyframes AnimationAppear_card {
+    0% {
+        opacity: 0;
+        transform: translateX(50vw) scale(0);
+    }
+}
+
+@keyframes appear_card {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
